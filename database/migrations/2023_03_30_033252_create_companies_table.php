@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
-            $table->string('user_name'); // 社長名を保存するカラム
-            $table->string('company_name'); // 会社名を保存するカラム
+            $table->string('user'); // 社長名を保存するカラム
+            $table->string('company'); // 会社名を保存するカラム
             $table->unsignedBigInteger('user_id')->nullable(); // usersテーブルのidカラムを参照する外部キー
             $table->timestamps();
 
@@ -22,8 +22,8 @@ return new class extends Migration
                   ->references('id')
                   ->on('users')
                   ->onDelete('set null');
-            $table->index('user_name');
-            $table->index('company_name');
+            $table->index('user');
+            $table->index('company');
         });
     }
 
