@@ -42,10 +42,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    Public function company()
+    public function company()
     {
-        return $this->belongsTo('App\Models\Company');
+        return $this->belongsTo(Company::class);
     }
+
 
     Public function books()
     {
