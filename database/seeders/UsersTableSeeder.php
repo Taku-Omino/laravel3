@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Company;
 
 class UsersTableSeeder extends Seeder
 {
@@ -15,7 +16,11 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()->count(5)->create();
+        $companies = Company::all();
+
+        User::factory()->count(10)->make()->each(function ($user) use ($companies) {
+            $user->company_id = $companies->random()->id;
+            $user->save();
+        });
     }
 }
-
