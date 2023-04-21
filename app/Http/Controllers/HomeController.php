@@ -21,11 +21,9 @@ class HomeController extends Controller
     /**
      * aboutページ
      */
-      public function about()
-      {
-        //$users = User::with('company')->get();
-        //return view('front.page.top.about')->with(['companies' => $companies]);
+    public function about()
+    {
         $users = User::with('company')->get();
         return view('front.page.top.about', compact('users'));
-      }
+    }
 }
