@@ -16,8 +16,8 @@ class Company extends Model
         'address',
     ];
 
-    public function user()
+    public function users()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany('App\Models\User');
     }
 }

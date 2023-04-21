@@ -44,7 +44,7 @@ class User extends Authenticatable
 
     Public function company()
     {
-        return $this->belongsTo(Company::class);
+        return $this->belongsTo('App\Models\Company');
     }
 
     Public function books()
