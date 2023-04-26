@@ -9,7 +9,7 @@
         <h2>著書一覧</h2>
         @foreach($books as $book)
         <div class="user-card">
-            <a href="{{ route('books.index',$book->id)}}"><p>{{ $book->title }}</p></a>
+            <a href="{{ route('books.show',$book->id)}}"><p>{{ $book->title }}</p></a>
             <p>著者:{{ $book->user->name }}</p>
             <p>コメント:{{ $book->comment }}</p>
         </div>

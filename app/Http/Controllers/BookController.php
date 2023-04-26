@@ -47,10 +47,7 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        $book = Book::whereHas('user', function ($query) use ($id) {
-            $query->where('id', $id);
-        })->first();
-
+        $book = Book::find($id);
         return view('front.page.book.show', compact('book'));
     }
 

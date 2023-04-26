@@ -9,7 +9,7 @@
         <h2>ユーザー一覧</h2>
         @foreach($users as $user)
         <div class="user-card">
-          <p>ユーザー名：{{$user->name}}</p>
+          <p>{{$user->name}}</p>
           <p>所属企業：{{ $user->company->name }}</p>
         </div>
         @endforeach

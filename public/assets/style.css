@@ -105,6 +105,9 @@ a:hover {
 body {
     line-height: 1.5;
 }
+form {
+    padding-left: 22px;
+}
 
 @media screen and (min-width: 796px) {
     .header {
@@ -138,6 +141,12 @@ body {
     .card {
         padding-left: 22px;
         padding-top: 10px;
+    }
+    .user-card {
+        padding-top: 10px;
+    }
+    .user-card p {
+        padding-left: 22px;
     }
     .name-wrap {
         margin-top: 30px;

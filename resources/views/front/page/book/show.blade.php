@@ -6,8 +6,7 @@
 <main>
     <div class="main">
         <h1 class="page-name">著書一覧ページです。</h1>
-        <h2>著書一覧</h2>
-
+        <h2>著書詳細</h2>
         <div class="user-card">
             <p>{{ $book->title }}</p>
             <p>著者:{{ $book->user->name }}</p>
@@ -18,6 +17,7 @@
             @method('delete')
             <input type="submit" value="削除">
         </form>
+
     </div>
 </main>
 @endsection
